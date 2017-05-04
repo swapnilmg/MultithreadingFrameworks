@@ -20,7 +20,7 @@ int main()
 {
     // Fibonacci number to be calculated.  39 is big enough to take a
     // reasonable amount of time
-    unsigned long n = 42;
+    unsigned long n = 47;
 
     unsigned long result = fib(n);
 

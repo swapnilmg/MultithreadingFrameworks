@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 {
 	// Fibonacci number to be calculated.  39 is big enough to take a
 	// reasonable amount of time
-	unsigned long n = 42;
+	unsigned long n = 47;
 	
 	// If we've got a parameter, assume it's the number of workers to be used
 	if (argc > 1)

@@ -30,12 +30,18 @@ int main()
 {
     // Fibonacci number to be calculated.  39 is big enough to take a
     // reasonable amount of time
-    unsigned long n = 42;
+    unsigned long n = 47;
 
     // Time how long it takes to calculate the nth Fibonacci number
     unsigned long result;
 
-	result = fib(n);
+    #pragma omp parallel
+	{
+		#pragma omp single nowait
+    	{
+			result = fib(n);
+		}
+	}
 
     printf("Fibonacci number #%d is %lu.\n", n, result);
 
